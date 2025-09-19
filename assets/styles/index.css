@@ -1,1 +1,298 @@
-/*# sourceMappingURL=index.css.map */
+@font-face {
+  font-family: "poppins";
+  src: url(../font/Poppins-Medium.ttf);
+}
+@font-face {
+  font-family: "roboto";
+  src: url(../font/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: "allura";
+  src: url(../font/Allura-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+span.cutlery {
+  padding-top: 30px;
+  display: inline-block;
+}
+span.cutlery img {
+  height: 30px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+  font-family: roboto;
+}
+
+a,
+a:visited {
+  color: rgb(234, 224, 224);
+}
+
+header {
+  background: url(../img/bg-slider-06.jpg) center/cover;
+  min-height: 100vh;
+}
+header .header-nav {
+  display: grid;
+  grid-template-columns: 15% 65% 20%;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header .header-nav h2 {
+  color: white;
+  font-family: allura;
+  place-self: center;
+  font-size: 2rem;
+}
+header .header-nav .acceuil {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+}
+header .header-nav .acceuil li a {
+  text-decoration: none;
+  color: rgb(234, 224, 224);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  display: inline-block;
+  transition: 0.3s;
+}
+header .header-nav .acceuil li a:hover {
+  transform: translateY(-5px);
+}
+header .header-nav .social {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
+  -ms-flex-align: center;
+      align-items: center;
+}
+header .header-nav .social li a {
+  display: inline-block;
+  transition: 0.3s;
+}
+header .header-nav .social li a:hover {
+  transform: scale(1.2);
+}
+header .header-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  margin-top: 110px;
+}
+header .header-container .header-container-title {
+  text-align: center;
+}
+header .header-container .header-container-title h3,
+header .header-container .header-container-title h1 {
+  line-height: 1;
+}
+header .header-container .header-container-title h3 {
+  font-family: allura;
+  color: rgba(151, 111, 37, 0.903);
+  font-size: 2.5rem;
+  font-weight: 100;
+  margin-top: 50px;
+}
+header .header-container .header-container-title h1 {
+  font-family: poppins;
+  text-transform: uppercase;
+  color: white;
+  font-size: 3.5rem;
+  letter-spacing: 8px;
+}
+header .header-container p {
+  color: rgb(234, 224, 224);
+  font-family: roboto;
+  letter-spacing: 5px;
+  padding-top: 35px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.banner {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.banner .banner-left {
+  background: rgb(234, 224, 224);
+}
+.banner .banner-left .banner-left-container {
+  text-align: center;
+  margin: 15px;
+  border: 1px dashed rgba(151, 111, 37, 0.903);
+  padding: 20px;
+}
+.banner .banner-left .banner-left-container h3 {
+  font-family: allura;
+  color: rgba(151, 111, 37, 0.903);
+  font-size: 1.7rem;
+}
+.banner .banner-left .banner-left-container h3,
+.banner .banner-left .banner-left-container h4 {
+  line-height: 1;
+}
+.banner .banner-left .banner-left-container h4 {
+  font-family: poppins;
+  text-transform: uppercase;
+}
+.banner .banner-left .banner-left-container p {
+  font-family: roboto;
+  font-size: 0.7rem;
+  line-height: 1.5;
+}
+.banner .banner-left .banner-left-container span.img {
+  padding-top: 25px;
+  display: inline-block;
+}
+.banner .banner-left .banner-left-container span.img img {
+  height: 60px;
+  border-radius: 70px;
+}
+.banner .banner-left .banner-left-container h5 {
+  font-family: poppins;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.banner .banner-left .banner-left-container span.name {
+  color: rgba(128, 128, 128, 0.581);
+  text-transform: uppercase;
+  font-family: roboto;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.banner .banner-right {
+  background: url(../img/store-01.jpg) center/cover;
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  background: rgba(6, 6, 6, 0.886);
+}
+main .menu .menu-container {
+  text-align: center;
+  padding: 20px;
+  width: 60%;
+  margin: 0 auto;
+}
+main .menu .menu-container h3 {
+  color: rgba(255, 166, 0, 0.668);
+  font-family: allura;
+  font-size: 1.5rem;
+  padding-top: 30px;
+}
+main .menu .menu-container .menu {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+}
+main .menu .menu-container .menu li {
+  color: rgb(234, 224, 224);
+  border-bottom: 1px solid rgb(234, 224, 224);
+  padding-bottom: 5px;
+  display: inline-block;
+  margin: 20px;
+}
+main .color {
+  background: url(../img/bg-menu-01.jpg);
+  margin-top: 250px;
+}
+main .color .color-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  -ms-flex-align: center;
+      align-items: center;
+  background: rgb(234, 224, 224);
+  width: 60%;
+  margin: 0 auto;
+}
+main .color .color-container .dish-left > div {
+  display: grid;
+  grid-template-columns: 30% 60% 10%;
+  place-self: center;
+  width: 100%;
+  gap: 10px;
+  padding: 10px;
+}
+main .color .color-container .dish-left > div span.image img {
+  border-radius: 50px;
+  place-self: center;
+  height: 80px;
+}
+main .color .color-container .dish-left > div .txt {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  text-align: left;
+}
+main .color .color-container .dish-left > div .txt .first {
+  font-family: poppins;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+main .color .color-container .dish-left > div .txt .second {
+  font-family: roboto;
+}
+main .color .color-container .dish-left > div span.money {
+  place-self: center;
+  color: rgba(151, 111, 37, 0.903);
+}
+main .color .color-container .dish-right > div {
+  display: grid;
+  grid-template-columns: 30% 60% 10%;
+  place-self: center;
+  width: 100%;
+  gap: 20px;
+  padding: 10px;
+  width: 100%;
+}
+main .color .color-container .dish-right > div span.image img {
+  border-radius: 50px;
+  height: 80px;
+}
+main .color .color-container .dish-right > div .txt {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+main .color .color-container .dish-right > div .txt .first {
+  font-family: poppins;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+main .color .color-container .dish-right > div .txt .second {
+  font-family: roboto;
+}
+main .color .color-container .dish-right > div span.money {
+  place-self: center;
+}/*# sourceMappingURL=index.css.map */

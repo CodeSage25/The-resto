@@ -1,0 +1,104 @@
+main {
+  background: $black2;
+
+  .menu {
+    .menu-container {
+      text-align: center;
+      padding: 20px;
+      width: 60%;
+      margin: 0 auto;
+
+      h3 {
+        color: $orange2;
+        font-family: $font3;
+        font-size: 1.5rem;
+        padding-top: 30px;
+      }
+      .menu {
+        @include spacearound;
+
+        li {
+          color: $white2;
+          border-bottom: 1px solid $white2;
+          padding-bottom: 5px;
+          display: inline-block;
+          margin: 20px;
+        }
+      }
+    }
+  }
+  .color {
+    background: url(../img/bg-menu-01.jpg);
+    margin-top: 250px;
+
+    .color-container {
+      @include grid;
+      background: $white2;
+      width: 60%;
+      margin: 0 auto;
+
+      .dish-left > div {
+        display: grid;
+        grid-template-columns: 30% 60% 10%;
+        place-self: center;
+        width: 100%;
+
+        gap: 10px;
+        padding: 10px;
+
+        span.image img {
+          border-radius: 50px;
+          place-self: center;
+          height: 80px;
+        }
+        .txt {
+          @include centerChild;
+          
+      text-align: left;
+
+          .first {
+            font-family: $font1;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+          }
+          .second {
+            font-family: $font2;
+          }
+        }
+        span.money {
+          place-self: center;
+          color: $orange;
+        }
+      }
+      .dish-right > div {
+        display: grid;
+        grid-template-columns: 30% 60% 10%;
+        place-self: center;
+width: 100%;
+        gap: 20px;
+        padding: 10px;
+        width: 100%;
+
+        span.image img {
+          border-radius: 50px;
+          height: 80px;
+        }
+        .txt {
+          @include centerChild;
+
+          .first {
+            font-family: $font1;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+          }
+          .second {
+            font-family: $font2;
+          }
+        }
+        span.money {
+          place-self: center;
+        }
+      }
+    }
+  }
+}
