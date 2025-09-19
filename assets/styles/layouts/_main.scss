@@ -2,6 +2,7 @@ main {
   background: $black2;
 
   .menu {
+    margin-bottom: 60px;
     .menu-container {
       text-align: center;
       padding: 20px;
@@ -14,6 +15,7 @@ main {
         font-size: 1.5rem;
         padding-top: 30px;
       }
+
       .menu {
         @include spacearound;
 
@@ -27,76 +29,297 @@ main {
       }
     }
   }
+
   .color {
     background: url(../img/bg-menu-01.jpg);
-    margin-top: 250px;
 
     .color-container {
       @include grid;
       background: $white2;
-      width: 60%;
+      width: 55%;
       margin: 0 auto;
+      padding: 40px 0px 0px 0px;
+      top: -120px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background: $orange;
+        top: 0;
+      }
 
       .dish-left > div {
         display: grid;
-        grid-template-columns: 30% 60% 10%;
+        grid-template-columns: 20% 60% 20%;
         place-self: center;
-        width: 100%;
-
-        gap: 10px;
-        padding: 10px;
+        width: 90%;
+        // margin-right: 10px;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px dashed $orange;
 
         span.image img {
           border-radius: 50px;
           place-self: center;
           height: 80px;
         }
+
         .txt {
-          @include centerChild;
-          
-      text-align: left;
+          display: flex;
+
+          align-items: center;
+
+          p {
+            text-align: left;
+            padding: 0 5px 0 22px;
+          }
 
           .first {
             font-family: $font1;
             text-transform: uppercase;
             font-size: 0.8rem;
           }
+
           .second {
             font-family: $font2;
           }
         }
+
         span.money {
           place-self: center;
           color: $orange;
         }
       }
+
       .dish-right > div {
         display: grid;
-        grid-template-columns: 30% 60% 10%;
+        grid-template-columns: 20% 60% 20%;
         place-self: center;
-width: 100%;
-        gap: 20px;
-        padding: 10px;
-        width: 100%;
+        width: 90%;
+        margin-bottom: 30px;
+        gap: 10px;
+        position: relative;
+        padding-bottom: 30px;
+        border-bottom: 1px dashed $orange;
 
         span.image img {
           border-radius: 50px;
+
           height: 80px;
         }
+
         .txt {
-          @include centerChild;
+          display: flex;
+
+          align-items: center;
+
+          p {
+            text-align: left;
+            padding: 0 5px 0 22px;
+          }
 
           .first {
             font-family: $font1;
             text-transform: uppercase;
             font-size: 0.8rem;
           }
+
           .second {
             font-family: $font2;
           }
         }
+
         span.money {
           place-self: center;
+          color: $orange;
+        }
+      }
+    }
+  }
+  .reservation {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 70%;
+    margin: 50px auto 0;
+
+    .reservation-left {
+      background: $black;
+      @include centerChild;
+
+      .reservation-left-container {
+        text-align: center;
+        padding: 20px;
+        border: 1px dashed $white2;
+        width: 85%;
+        margin: 15px 0;
+
+        h3 {
+          color: $orange;
+          font-family: $font3;
+          font-size: 1.9rem;
+          font-weight: normal;
+        }
+        h3,
+        h4 {
+          line-height: 0.9;
+        }
+        h4 {
+          color: $white1;
+          font-family: $font1;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+        }
+        span.cutlery {
+          padding-bottom: 20px;
+          img {
+            height: 20px;
+          }
+        }
+        h5 {
+          color: $orange;
+          text-transform: uppercase;
+          font-family: $font1;
+        }
+        p {
+          color: $white2;
+          font-family: $font2;
+          padding: 5px 0 30px 0;
+          font-size: 0.8rem;
+        }
+      }
+    }
+    .reservation-right {
+      background: $white2;
+      display: flex;
+      justify-content: center;
+
+      .reservation-right-container {
+        width: 80%;
+        margin: 10px auto;
+        text-align: center;
+
+        h3 {
+          color: $orange;
+          font-family: $font3;
+          font-size: 1.9rem;
+          font-weight: normal;
+          padding-top: 50px;
+        }
+        h3,
+        h4 {
+          line-height: 0.9;
+        }
+        h4 {
+          color: $black;
+          font-family: $font1;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-size: 1.2rem;
+        }
+        span.cutlery {
+          padding-bottom: 20px;
+          img {
+            height: 20px;
+          }
+        }
+
+        form {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr 1fr;
+          grid-template-areas:
+            "selec dat heur"
+            "txt tel mail"
+            "vid sub vid";
+          gap: 20px;
+
+          input,
+          select {
+            outline: none;
+            border: none;
+            background: transparent;
+            border-bottom: 1px solid $grey;
+          }
+
+          input[type="submit"] {
+            grid-column: 2;
+            grid-row: 3;
+            justify-self: center;
+            border: 1px solid $black;
+            padding: 10px 30px;
+            background: $black;
+            color: $white2;
+            border-radius: 50px;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            font-family: $font1;
+            transition: 0.3s;
+            cursor: pointer;
+
+            &:hover {
+              letter-spacing: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .text {
+    text-align: center;
+
+    h3 {
+      color: $orange;
+      font-family: $font3;
+      font-size: 1.9rem;
+      font-weight: normal;
+      padding-top: 50px;
+    }
+    h3,
+    h4 {
+      line-height: 1;
+    }
+    h4 {
+      color: $white1;
+      font-family: $font1;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 1.2rem;
+    }
+    span.cutlery {
+      padding-bottom: 20px;
+      img {
+        height: 20px;
+      }
+    }
+  }
+  .order {
+    width: 70%;
+    margin: 0 auto;
+    @include grid;
+
+    .order-left-upper {
+      display: grid;
+      grid-template-columns: 40% 60%;
+
+      .icon {
+        background: url(../img/event-01.jpg) center/cover;
+        @include centerChild;
+
+        .icon-container {
+          background: $black;
+
+          span.date {
+            .num {
+              color: $white1;
+            }
+            .mon {
+              color: $white2;
+            }
+          }
         }
       }
     }
