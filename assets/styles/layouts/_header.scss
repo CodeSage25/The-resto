@@ -9,15 +9,29 @@ header {
 
     max-width: 1200px;
     margin: 0 auto;
+    @media screen and (max-width: 700px) {
+      display: grid;
+      grid-template-columns: 40% 60%;
+    }
 
     h2 {
       color: $white1;
       font-family: $font3;
       place-self: center;
       font-size: 2rem;
+      @media screen and (max-width: 900px) {
+        font-size: 1.7rem;
+      }
+      @media screen and (max-width: 600px) {
+        font-size: 2rem;
+      }
     }
     .acceuil {
       @include spacearound;
+      align-items: center;
+      @media screen and (max-width: 700px) {
+        display: none;
+      }
 
       li {
         a {
@@ -27,6 +41,10 @@ header {
           font-size: 0.8rem;
           display: inline-block;
           transition: 0.3s;
+
+          @media screen and (max-width: 900px) {
+            font-size: 0.7rem;
+          }
 
           &:hover {
             transform: translateY(-5px);
@@ -38,6 +56,12 @@ header {
       @include spaceevenly;
 
       li {
+        @media screen and (max-width: 900px) {
+          font-size: 0.7rem;
+        }
+        @media screen and (max-width: 600px) {
+          font-size: 1rem;
+        }
         a {
           display: inline-block;
           transition: 0.3s;
@@ -66,6 +90,10 @@ header {
         font-size: 2.5rem;
         font-weight: 100;
         margin-top: 50px;
+
+        @media screen and (max-width: 600px) {
+          transform: translateY(-40px);
+        }
       }
       h1 {
         font-family: $font1;
@@ -73,16 +101,26 @@ header {
         color: $white1;
         font-size: 3.5rem;
         letter-spacing: 8px;
+
+        @media screen and (max-width: 600px) {
+          font-size: 2rem;
+          transform: translateY(-10px);
+          letter-spacing: 13px;
+        }
       }
-      
     }
-    p{
-       color: $white2; 
-       font-family: $font2;
-       letter-spacing: 5px;
-       padding-top: 35px;
-       text-transform: uppercase;
-       font-size: 0.9rem;
+    p {
+      color: $white2;
+      font-family: $font2;
+      letter-spacing: 5px;
+      padding-top: 35px;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+
+      @media screen and (max-width: 600px) {
+        width: 60%;
+        margin: 0 auto;
+      }
     }
   }
 }

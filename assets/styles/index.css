@@ -16,6 +16,10 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 span.cutlery {
   padding-top: 30px;
   display: inline-block;
@@ -49,11 +53,27 @@ header .header-nav {
   max-width: 1200px;
   margin: 0 auto;
 }
+@media screen and (max-width: 700px) {
+  header .header-nav {
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+}
 header .header-nav h2 {
   color: white;
   font-family: allura;
   place-self: center;
   font-size: 2rem;
+}
+@media screen and (max-width: 900px) {
+  header .header-nav h2 {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  header .header-nav h2 {
+    font-size: 2rem;
+  }
 }
 header .header-nav .acceuil {
   display: -ms-flexbox;
@@ -63,6 +83,11 @@ header .header-nav .acceuil {
   -ms-flex-align: center;
       align-items: center;
 }
+@media screen and (max-width: 700px) {
+  header .header-nav .acceuil {
+    display: none;
+  }
+}
 header .header-nav .acceuil li a {
   text-decoration: none;
   color: rgb(234, 224, 224);
@@ -70,6 +95,11 @@ header .header-nav .acceuil li a {
   font-size: 0.8rem;
   display: inline-block;
   transition: 0.3s;
+}
+@media screen and (max-width: 900px) {
+  header .header-nav .acceuil li a {
+    font-size: 0.7rem;
+  }
 }
 header .header-nav .acceuil li a:hover {
   transform: translateY(-5px);
@@ -81,6 +111,16 @@ header .header-nav .social {
       justify-content: space-evenly;
   -ms-flex-align: center;
       align-items: center;
+}
+@media screen and (max-width: 900px) {
+  header .header-nav .social li {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  header .header-nav .social li {
+    font-size: 1rem;
+  }
 }
 header .header-nav .social li a {
   display: inline-block;
@@ -112,12 +152,24 @@ header .header-container .header-container-title h3 {
   font-weight: 100;
   margin-top: 50px;
 }
+@media screen and (max-width: 600px) {
+  header .header-container .header-container-title h3 {
+    transform: translateY(-40px);
+  }
+}
 header .header-container .header-container-title h1 {
   font-family: poppins;
   text-transform: uppercase;
   color: white;
   font-size: 3.5rem;
   letter-spacing: 8px;
+}
+@media screen and (max-width: 600px) {
+  header .header-container .header-container-title h1 {
+    font-size: 2rem;
+    transform: translateY(-10px);
+    letter-spacing: 13px;
+  }
 }
 header .header-container p {
   color: rgb(234, 224, 224);
@@ -127,12 +179,24 @@ header .header-container p {
   text-transform: uppercase;
   font-size: 0.9rem;
 }
+@media screen and (max-width: 600px) {
+  header .header-container p {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
 
 .banner {
   display: grid;
   grid-template-columns: 50% 50%;
   -ms-flex-align: center;
       align-items: center;
+}
+@media screen and (max-width: 700px) {
+  .banner {
+    display: grid;
+    grid-template-columns: 100%;
+  }
 }
 .banner .banner-left {
   background: rgb(234, 224, 224);
@@ -186,19 +250,54 @@ header .header-container p {
   width: 100%;
   height: 100%;
 }
+@media screen and (max-width: 700px) {
+  .banner .banner-right {
+    display: none;
+  }
+}
 
 main {
   background: rgba(6, 6, 6, 0.886);
-  height: 2250px;
+  min-height: 2200px;
+}
+@media screen and (max-width: 1000px) {
+  main {
+    height: 2300px;
+  }
+}
+@media screen and (max-width: 900px) {
+  main {
+    height: 2600px;
+  }
+}
+@media screen and (max-width: 600px) {
+  main {
+    height: 2800px;
+  }
+}
+@media screen and (max-width: 400px) {
+  main {
+    height: 3000px;
+  }
 }
 main .menu {
   margin-bottom: 60px;
+}
+@media screen and (max-width: 1060px) {
+  main .menu {
+    height: 800px;
+  }
 }
 main .menu .menu-container {
   text-align: center;
   padding: 20px;
   width: 60%;
   margin: 0 auto;
+}
+@media screen and (max-width: 610px) {
+  main .menu .menu-container {
+    width: 70%;
+  }
 }
 main .menu .menu-container h3 {
   color: rgba(255, 166, 0, 0.668);
@@ -211,18 +310,26 @@ main .menu .menu-container .menu {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -ms-flex-align: center;
-      align-items: center;
 }
 main .menu .menu-container .menu li {
   color: rgb(234, 224, 224);
   border-bottom: 1px solid rgb(234, 224, 224);
   padding-bottom: 5px;
   display: inline-block;
-  margin: 20px;
+  margin: 20px auto;
+}
+@media screen and (max-width: 610px) {
+  main .menu .menu-container .menu li {
+    font-size: 0.8rem;
+  }
 }
 main .color {
-  background: url(../img/bg-menu-01.jpg);
+  background: url(../img/bg-menu-01.jpg) fixed;
+}
+@media screen and (max-width: 1060px) {
+  main .color {
+    height: 650px;
+  }
 }
 main .color .color-container {
   display: grid;
@@ -230,11 +337,19 @@ main .color .color-container {
   -ms-flex-align: center;
       align-items: center;
   background: rgb(234, 224, 224);
-  width: 55%;
+  width: 60%;
   margin: 0 auto;
   padding: 40px 0px 0px 0px;
   top: -120px;
   position: relative;
+}
+@media screen and (max-width: 1060px) {
+  main .color .color-container {
+    display: block;
+    top: -650px;
+    width: 60%;
+    padding: 15px 5px;
+  }
 }
 main .color .color-container::before {
   content: "";
@@ -252,6 +367,7 @@ main .color .color-container .dish-left > div {
   margin-bottom: 30px;
   padding-bottom: 30px;
   border-bottom: 1px dashed rgba(151, 111, 37, 0.903);
+  gap: 10px;
 }
 main .color .color-container .dish-left > div span.image img {
   border-radius: 50px;
@@ -323,6 +439,11 @@ main .reservation {
   width: 70%;
   margin: 50px auto 0;
 }
+@media screen and (max-width: 900px) {
+  main .reservation {
+    display: block;
+  }
+}
 main .reservation .reservation-left {
   background: black;
   display: -ms-flexbox;
@@ -380,7 +501,6 @@ main .reservation .reservation-right {
       justify-content: center;
 }
 main .reservation .reservation-right .reservation-right-container {
-  width: 80%;
   margin: 10px auto;
   text-align: center;
 }
@@ -412,8 +532,14 @@ main .reservation .reservation-right .reservation-right-container form {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: "selec dat heur" "txt tel mail" "vid sub vid";
   gap: 20px;
+}
+@media screen and (max-width: 600px) {
+  main .reservation .reservation-right .reservation-right-container form {
+    display: block;
+    width: 70%;
+    margin: 10px auto;
+  }
 }
 main .reservation .reservation-right .reservation-right-container form input,
 main .reservation .reservation-right .reservation-right-container form select {
@@ -421,6 +547,19 @@ main .reservation .reservation-right .reservation-right-container form select {
   border: none;
   background: transparent;
   border-bottom: 1px solid rgba(128, 128, 128, 0.581);
+}
+@media screen and (max-width: 1100px) {
+  main .reservation .reservation-right .reservation-right-container form input,
+  main .reservation .reservation-right .reservation-right-container form select {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  main .reservation .reservation-right .reservation-right-container form input,
+  main .reservation .reservation-right .reservation-right-container form select {
+    padding: 20px;
+  }
 }
 main .reservation .reservation-right .reservation-right-container form input[type=submit] {
   grid-column: 2;
@@ -438,11 +577,22 @@ main .reservation .reservation-right .reservation-right-container form input[typ
   transition: 0.3s;
   cursor: pointer;
 }
+@media screen and (max-width: 1100px) {
+  main .reservation .reservation-right .reservation-right-container form input[type=submit] {
+    width: 65%;
+    margin: 15px auto 0px;
+  }
+}
 main .reservation .reservation-right .reservation-right-container form input[type=submit]:hover {
   letter-spacing: 5px;
 }
 main .text {
   text-align: center;
+}
+@media screen and (max-width: 1060px) {
+  main .text {
+    display: none;
+  }
 }
 main .text h3 {
   color: rgba(151, 111, 37, 0.903);
@@ -478,10 +628,15 @@ main .order {
       align-items: center;
   margin-bottom: 50px;
 }
+@media screen and (max-width: 1060px) {
+  main .order {
+    display: none;
+  }
+}
 main .order .order-left {
   gap: 20px;
   display: grid;
-  height: 300px;
+  height: 100%;
 }
 main .order .order-left .order-left-upper {
   display: grid;
@@ -588,7 +743,7 @@ main .order-right {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  height: 300px;
+  height: 100%;
 }
 main .order-right .order-right-container {
   background: rgb(234, 224, 224);
@@ -656,6 +811,11 @@ main .order-right .order-right-container P {
   padding-bottom: 50px;
   position: relative;
 }
+@media screen and (max-width: 400px) {
+  .map-section .map-section-container {
+    top: -400px;
+  }
+}
 .map-section .map-section-container span.image {
   border-radius: 50px;
   display: block;
@@ -697,6 +857,11 @@ footer {
       align-items: center;
   height: 250px;
 }
+@media screen and (max-width: 914px) {
+  footer {
+    display: block;
+  }
+}
 footer footer-left {
   height: 250px;
   background: black;
@@ -706,6 +871,11 @@ footer footer-left {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
+}
+@media screen and (max-width: 914px) {
+  footer footer-left {
+    display: none;
+  }
 }
 footer footer-left footer-left-container {
   padding: 15px 25px 15px 190px;
@@ -717,15 +887,37 @@ footer footer-left footer-left-container h3 {
 }
 footer footer-left footer-left-container p {
   color: rgba(128, 128, 128, 0.581);
-  line-height: 1.5;
+  line-height: 1.7;
+  font-family: roboto;
+  font-size: 0.8rem;
 }
 footer footer-right {
   height: 250px;
   background: rgba(6, 6, 6, 0.886);
+  display: block;
+}
+@media screen and (max-width: 914px) {
+  footer footer-right {
+    display: block;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+  }
 }
 footer footer-right footer-right-container {
   padding: 5px 190px 15px 40px;
   display: block;
+}
+@media screen and (max-width: 914px) {
+  footer footer-right footer-right-container {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
 }
 footer footer-right footer-right-container h3 {
   text-transform: uppercase;
@@ -740,13 +932,16 @@ footer footer-right footer-right-container input[type=email] {
   border: 1px solid rgba(128, 128, 128, 0.581);
   width: 65%;
   margin: 13px 0;
+  color: rgb(234, 224, 224);
 }
 footer footer-right footer-right-container input[type=email]:focus {
   outline: none;
+  color: rgb(234, 224, 224);
 }
 footer footer-right footer-right-container .network {
   display: grid;
-  grid-template-columns: 18% 25%;
+  grid-template-columns: 40% 60%;
+  width: 100%;
   -ms-flex-align: center;
       align-items: center;
   padding-top: 34px;

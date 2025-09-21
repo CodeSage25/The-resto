@@ -2,12 +2,21 @@ footer {
   @include grid;
   height: 250px;
 
+  @media screen and (max-width: 914px) {
+    display: block;
+  }
+
   footer-left {
     height: 250px;
     background: $black;
     @include centerChild;
+
+    @media screen and (max-width: 914px) {
+      display: none;
+    }
     footer-left-container {
       padding: 15px 25px 15px 190px;
+
       h3 {
         color: $orange;
         font-family: $font3;
@@ -15,17 +24,34 @@ footer {
       }
       p {
         color: $grey;
-        line-height: 1.5;
+        line-height: 1.7;
+        font-family: $font2;
+        font-size: 0.8rem;
       }
     }
   }
   footer-right {
     height: 250px;
     background: $black2;
+    display: block;
+
+    @media screen and (max-width: 914px) {
+      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
     footer-right-container {
       padding: 5px 190px 15px 40px;
       display: block;
+
+      @media screen and (max-width: 914px) {
+        width: 70%;
+        display: block;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
 
       h3 {
         text-transform: uppercase;
@@ -40,14 +66,17 @@ footer {
         border: 1px solid $grey;
         width: 65%;
         margin: 13px 0;
+        color: $white2;
 
         &:focus {
           outline: none;
+          color: $white2;
         }
       }
       .network {
         display: grid;
-        grid-template-columns: 18% 25%;
+        grid-template-columns: 40% 60%;
+        width: 100%;
         align-items: center;
         padding-top: 34px;
 

@@ -28,6 +28,10 @@ $grey2: rgba(149, 149, 149, 0.393);
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 @mixin centerChild {
   display: flex;
   justify-content: center;
@@ -41,7 +45,6 @@ $grey2: rgba(149, 149, 149, 0.393);
 @mixin spacearound {
   display: flex;
   justify-content: space-around;
-  align-items: center;
 }
 @mixin spaceevenly {
   display: flex;
