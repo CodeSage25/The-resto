@@ -1,5 +1,6 @@
 main {
   background: $black2;
+  height: 2250px;
 
   .menu {
     margin-bottom: 60px;
@@ -290,37 +291,183 @@ main {
       font-size: 1.2rem;
     }
     span.cutlery {
-      padding-bottom: 20px;
+      padding-bottom: 25px;
       img {
         height: 20px;
       }
     }
   }
   .order {
-    width: 70%;
+    width: 65%;
+    gap: 15px;
     margin: 0 auto;
     @include grid;
+    margin-bottom: 50px;
 
-    .order-left-upper {
+    .order-left {
+      gap: 20px;
       display: grid;
-      grid-template-columns: 40% 60%;
+      height: 300px;
 
-      .icon {
-        background: url(../img/event-01.jpg) center/cover;
-        @include centerChild;
+      .order-left-upper {
+        display: grid;
+        grid-template-columns: 40% 60%;
 
-        .icon-container {
-          background: $black;
+        .icon {
+          background: url(../img/event-01.jpg) center/cover;
+          @include centerChild;
 
-          span.date {
-            .num {
-              color: $white1;
-            }
-            .mon {
-              color: $white2;
+          .icon-container {
+            background: $black2;
+
+            span.date {
+              text-align: center;
+              padding: 10px 20px;
+              display: inline-block;
+              .num {
+                color: $white1;
+                font-family: $font2;
+                font-size: 1.5rem;
+                font-weight: bold;
+              }
+              .num,
+              .nom {
+                line-height: 0.8;
+              }
+              .mon {
+                color: $white2;
+                font-family: $font2;
+                font-size: 0.8rem;
+              }
             }
           }
         }
+        .localisation {
+          background: $white2;
+          padding: 5px 10px;
+          .localisation-container {
+            h5 {
+              font-family: $font2;
+              font-weight: 500;
+              padding-top: 20px;
+              font-size: 1rem;
+              letter-spacing: 1.3px;
+            }
+            span.geo {
+              font-family: $font1;
+              color: $grey2;
+              font-size: 0.7rem;
+              padding: 15px 0;
+              display: inline-block;
+
+              i {
+                color: $grey;
+                font-size: 0.7rem;
+              }
+            }
+            P {
+              font-family: $font1;
+              text-transform: uppercase;
+              font-size: 0.8rem;
+              letter-spacing: 1.3px;
+              padding-bottom: 20px;
+            }
+          }
+        }
+
+        .iconn {
+          background: url(../img/event-02.jpg) center/cover;
+          @include centerChild;
+
+          .icon-container {
+            background: $black2;
+
+            span.date {
+              text-align: center;
+              padding: 10px 20px;
+              display: inline-block;
+              .num {
+                color: $white1;
+                font-family: $font2;
+                font-size: 1.5rem;
+                font-weight: bold;
+              }
+              .num,
+              .nom {
+                line-height: 0.8;
+              }
+              .mon {
+                color: $white2;
+                font-family: $font2;
+                font-size: 0.8rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .order-right {
+    background: url(../img/event-03.jpg) center/cover;
+    @include centerChild;
+    height: 300px;
+
+    .order-right-container {
+      background: $white2;
+
+      width: 90%;
+      text-align: center;
+      height: 90%;
+      .icon-container {
+        span.date {
+          background: $black2;
+          text-align: center;
+          padding: 10px 20px;
+          display: inline-block;
+          .num {
+            color: $white1;
+            font-family: $font2;
+            font-size: 1.5rem;
+            font-weight: bold;
+          }
+          .num,
+          .nom {
+            line-height: 0;
+          }
+          .mon {
+            color: $white2;
+            font-family: $font2;
+            font-size: 0.8rem;
+            text-transform: capitalize;
+          }
+        }
+      }
+      h5 {
+        font-family: $font2;
+        font-weight: 500;
+        padding-top: 20px;
+        font-size: 1rem;
+        letter-spacing: 1.3px;
+      }
+
+      span.geo {
+        font-family: $font1;
+        color: $grey2;
+        font-size: 0.7rem;
+        padding: 20px;
+        display: inline-block;
+
+        i {
+          color: $grey;
+          font-size: 0.7rem;
+        }
+      }
+      P {
+        font-family: $font1;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 1.3px;
+        padding-top: 14px;
       }
     }
   }

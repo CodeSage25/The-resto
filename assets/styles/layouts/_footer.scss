@@ -1,0 +1,80 @@
+footer {
+  @include grid;
+  height: 250px;
+
+  footer-left {
+    height: 250px;
+    background: $black;
+    @include centerChild;
+    footer-left-container {
+      padding: 15px 25px 15px 190px;
+      h3 {
+        color: $orange;
+        font-family: $font3;
+        font-size: 2rem;
+      }
+      p {
+        color: $grey;
+        line-height: 1.5;
+      }
+    }
+  }
+  footer-right {
+    height: 250px;
+    background: $black2;
+
+    footer-right-container {
+      padding: 5px 190px 15px 40px;
+      display: block;
+
+      h3 {
+        text-transform: uppercase;
+        font-family: $font2;
+        color: $white2;
+        padding-top: 30px;
+        font-size: 0.9rem;
+      }
+      input[type="email"] {
+        padding: 6px;
+        background: transparent;
+        border: 1px solid $grey;
+        width: 65%;
+        margin: 13px 0;
+
+        &:focus {
+          outline: none;
+        }
+      }
+      .network {
+        display: grid;
+        grid-template-columns: 18% 25%;
+        align-items: center;
+        padding-top: 34px;
+
+        h4 {
+          font-family: $font2;
+          text-transform: uppercase;
+          color: $white2;
+          font-size: 0.89rem;
+        }
+        .network-icon {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          li {
+            a {
+              color: $grey;
+              display: inline-block;
+              transition: 0.3s;
+
+              &:hover {
+                transform: scale(1.3);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -189,6 +189,7 @@ header .header-container p {
 
 main {
   background: rgba(6, 6, 6, 0.886);
+  height: 2250px;
 }
 main .menu {
   margin-bottom: 60px;
@@ -462,24 +463,31 @@ main .text h4 {
   font-size: 1.2rem;
 }
 main .text span.cutlery {
-  padding-bottom: 20px;
+  padding-bottom: 25px;
 }
 main .text span.cutlery img {
   height: 20px;
 }
 main .order {
-  width: 70%;
+  width: 65%;
+  gap: 15px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 50% 50%;
   -ms-flex-align: center;
       align-items: center;
+  margin-bottom: 50px;
 }
-main .order .order-left-upper {
+main .order .order-left {
+  gap: 20px;
+  display: grid;
+  height: 300px;
+}
+main .order .order-left .order-left-upper {
   display: grid;
   grid-template-columns: 40% 60%;
 }
-main .order .order-left-upper .icon {
+main .order .order-left .order-left-upper .icon {
   background: url(../img/event-01.jpg) center/cover;
   display: -ms-flexbox;
   display: flex;
@@ -488,12 +496,280 @@ main .order .order-left-upper .icon {
   -ms-flex-align: center;
       align-items: center;
 }
-main .order .order-left-upper .icon .icon-container {
-  background: black;
+main .order .order-left .order-left-upper .icon .icon-container {
+  background: rgba(6, 6, 6, 0.886);
 }
-main .order .order-left-upper .icon .icon-container span.date .num {
+main .order .order-left .order-left-upper .icon .icon-container span.date {
+  text-align: center;
+  padding: 10px 20px;
+  display: inline-block;
+}
+main .order .order-left .order-left-upper .icon .icon-container span.date .num {
   color: white;
+  font-family: roboto;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
-main .order .order-left-upper .icon .icon-container span.date .mon {
+main .order .order-left .order-left-upper .icon .icon-container span.date .num,
+main .order .order-left .order-left-upper .icon .icon-container span.date .nom {
+  line-height: 0.8;
+}
+main .order .order-left .order-left-upper .icon .icon-container span.date .mon {
   color: rgb(234, 224, 224);
+  font-family: roboto;
+  font-size: 0.8rem;
+}
+main .order .order-left .order-left-upper .localisation {
+  background: rgb(234, 224, 224);
+  padding: 5px 10px;
+}
+main .order .order-left .order-left-upper .localisation .localisation-container h5 {
+  font-family: roboto;
+  font-weight: 500;
+  padding-top: 20px;
+  font-size: 1rem;
+  letter-spacing: 1.3px;
+}
+main .order .order-left .order-left-upper .localisation .localisation-container span.geo {
+  font-family: poppins;
+  color: rgba(149, 149, 149, 0.393);
+  font-size: 0.7rem;
+  padding: 15px 0;
+  display: inline-block;
+}
+main .order .order-left .order-left-upper .localisation .localisation-container span.geo i {
+  color: rgba(128, 128, 128, 0.581);
+  font-size: 0.7rem;
+}
+main .order .order-left .order-left-upper .localisation .localisation-container P {
+  font-family: poppins;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1.3px;
+  padding-bottom: 20px;
+}
+main .order .order-left .order-left-upper .iconn {
+  background: url(../img/event-02.jpg) center/cover;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+main .order .order-left .order-left-upper .iconn .icon-container {
+  background: rgba(6, 6, 6, 0.886);
+}
+main .order .order-left .order-left-upper .iconn .icon-container span.date {
+  text-align: center;
+  padding: 10px 20px;
+  display: inline-block;
+}
+main .order .order-left .order-left-upper .iconn .icon-container span.date .num {
+  color: white;
+  font-family: roboto;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+main .order .order-left .order-left-upper .iconn .icon-container span.date .num,
+main .order .order-left .order-left-upper .iconn .icon-container span.date .nom {
+  line-height: 0.8;
+}
+main .order .order-left .order-left-upper .iconn .icon-container span.date .mon {
+  color: rgb(234, 224, 224);
+  font-family: roboto;
+  font-size: 0.8rem;
+}
+main .order-right {
+  background: url(../img/event-03.jpg) center/cover;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 300px;
+}
+main .order-right .order-right-container {
+  background: rgb(234, 224, 224);
+  width: 90%;
+  text-align: center;
+  height: 90%;
+}
+main .order-right .order-right-container .icon-container span.date {
+  background: rgba(6, 6, 6, 0.886);
+  text-align: center;
+  padding: 10px 20px;
+  display: inline-block;
+}
+main .order-right .order-right-container .icon-container span.date .num {
+  color: white;
+  font-family: roboto;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+main .order-right .order-right-container .icon-container span.date .num,
+main .order-right .order-right-container .icon-container span.date .nom {
+  line-height: 0;
+}
+main .order-right .order-right-container .icon-container span.date .mon {
+  color: rgb(234, 224, 224);
+  font-family: roboto;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+main .order-right .order-right-container h5 {
+  font-family: roboto;
+  font-weight: 500;
+  padding-top: 20px;
+  font-size: 1rem;
+  letter-spacing: 1.3px;
+}
+main .order-right .order-right-container span.geo {
+  font-family: poppins;
+  color: rgba(149, 149, 149, 0.393);
+  font-size: 0.7rem;
+  padding: 20px;
+  display: inline-block;
+}
+main .order-right .order-right-container span.geo i {
+  color: rgba(128, 128, 128, 0.581);
+  font-size: 0.7rem;
+}
+main .order-right .order-right-container P {
+  font-family: poppins;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1.3px;
+  padding-top: 14px;
+}
+
+.map-section {
+  background: url(../img/gmap.jpg) center/cover;
+  height: 350px;
+}
+.map-section .map-section-container {
+  background: rgb(234, 224, 224);
+  margin: 0 auto;
+  width: 65%;
+  top: -200px;
+  padding-bottom: 50px;
+  position: relative;
+}
+.map-section .map-section-container span.image {
+  border-radius: 50px;
+  display: block;
+}
+.map-section .map-section-container span.image img {
+  height: 60px;
+  border-radius: 70px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.map-section .map-section-container .map-container {
+  text-align: center;
+  padding-top: 70px;
+  width: 85%;
+  margin: 0 auto;
+  font-family: roboto;
+}
+.map-section .map-section-container .map-container p {
+  line-height: 1.7;
+  font-size: 0.9rem;
+}
+.map-section .map-section-container .map-container h5 {
+  font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: 1.1px;
+  padding: 30px 0 10px 0;
+}
+.map-section .map-section-container .map-container h6 {
+  color: rgba(151, 111, 37, 0.903);
+  font-size: 0.9rem;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 250px;
+}
+footer footer-left {
+  height: 250px;
+  background: black;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+footer footer-left footer-left-container {
+  padding: 15px 25px 15px 190px;
+}
+footer footer-left footer-left-container h3 {
+  color: rgba(151, 111, 37, 0.903);
+  font-family: allura;
+  font-size: 2rem;
+}
+footer footer-left footer-left-container p {
+  color: rgba(128, 128, 128, 0.581);
+  line-height: 1.5;
+}
+footer footer-right {
+  height: 250px;
+  background: rgba(6, 6, 6, 0.886);
+}
+footer footer-right footer-right-container {
+  padding: 5px 190px 15px 40px;
+  display: block;
+}
+footer footer-right footer-right-container h3 {
+  text-transform: uppercase;
+  font-family: roboto;
+  color: rgb(234, 224, 224);
+  padding-top: 30px;
+  font-size: 0.9rem;
+}
+footer footer-right footer-right-container input[type=email] {
+  padding: 6px;
+  background: transparent;
+  border: 1px solid rgba(128, 128, 128, 0.581);
+  width: 65%;
+  margin: 13px 0;
+}
+footer footer-right footer-right-container input[type=email]:focus {
+  outline: none;
+}
+footer footer-right footer-right-container .network {
+  display: grid;
+  grid-template-columns: 18% 25%;
+  -ms-flex-align: center;
+      align-items: center;
+  padding-top: 34px;
+}
+footer footer-right footer-right-container .network h4 {
+  font-family: roboto;
+  text-transform: uppercase;
+  color: rgb(234, 224, 224);
+  font-size: 0.89rem;
+}
+footer footer-right footer-right-container .network .network-icon {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+}
+footer footer-right footer-right-container .network .network-icon li a {
+  color: rgba(128, 128, 128, 0.581);
+  display: inline-block;
+  transition: 0.3s;
+}
+footer footer-right footer-right-container .network .network-icon li a:hover {
+  transform: scale(1.3);
 }/*# sourceMappingURL=index.css.map */
